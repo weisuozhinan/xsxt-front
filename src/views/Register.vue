@@ -37,7 +37,7 @@
         </el-radio-group>
       </el-form-item>
         <el-button type="primary" style="width: 100%" @click="submitRegister('registerForm')">注册</el-button>
-      <p class="login" style="text-align: center" @click="gotoLogin()">立即登录</p>
+      <p class="login"  @click="gotoLogin()">立即登录</p>
     </el-form>
   </div>
 </template>
@@ -88,7 +88,7 @@ export default {
         if (valid){
           this.loading=true;
           if(this.registerForm.permission==0) {
-            this.postRequest('/admin/', this.registerForm).then(resp => {
+            this.postRequest('/register/admin', this.registerForm).then(resp => {
               this.loading = false;
               if (resp) {
                 alert("注册成功");
@@ -96,7 +96,7 @@ export default {
               }
             })
           }else if(this.registerForm.permission==2) {
-            this.postRequest('/student/', this.registerForm).then(resp => {
+            this.postRequest('/register/student', this.registerForm).then(resp => {
               this.loading = false;
               if (resp) {
                 alert("注册成功");
@@ -105,7 +105,7 @@ export default {
               }
             })
           }else {
-            this.postRequest('/teacher/', this.registerForm).then(resp => {
+            this.postRequest('/register/teacher', this.registerForm).then(resp => {
               this.loading = false;
               if (resp) {
                 alert("注册成功");
