@@ -82,7 +82,7 @@
                  :model="updateFile"
                  :rules="rules">
           <el-row>
-            <el-col :span="8">
+            <el-col :span="9">
               <el-form-item label="日记检查成绩：" prop="diaryScore">
                 <el-input size="small" style="width: 150px" v-model="updateFile.diaryScore"
                           placeholder="成绩"></el-input>
@@ -188,7 +188,7 @@ export default {
         diaryScore: [
           {
             validator: (rule, value, cb) => {
-              if (/^((0?[1-9])|((1)[0-9])|20)$/.test(value)) {
+              if (/^(([0-9]|1[0-9]|20))$/.test(value)) {
                 cb()
               } else {
                 cb(new Error('请输入0-20的整数'))

@@ -8,8 +8,6 @@
                     placeholder="请输入课题名称进行搜索..."></el-input>
           <el-button type="primary" icon="el-icon-search" @click="initContent">搜索
           </el-button>
-          <a href="F:\file\进度46378.txt">11</a>
-
         </div>
       </div>
     </div>
