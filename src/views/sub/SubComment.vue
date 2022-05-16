@@ -18,8 +18,8 @@
                 element-loading-spinner="el-icon-loading"
                 element-loading-background="rgba(0, 0, 0, 0.8)"
                 stripe border style="width: 100%">
-        <el-table-column width="55" label="序号" type="index" align="center"></el-table-column>
-        <el-table-column prop="name" label="课题名称" align="left"></el-table-column>
+        <el-table-column width="55" label="序号" fixed type="index" align="center"></el-table-column>
+        <el-table-column prop="name" label="课题名称" fixed align="left"></el-table-column>
         <el-table-column prop="student.name" label="学生名称" align="left" v-if="permission==1"></el-table-column>
         <el-table-column prop="teacher.name" label="教师名称" align="left" v-if="permission==2"></el-table-column>
         <el-table-column prop="status" label="状态" align="left" width="150">

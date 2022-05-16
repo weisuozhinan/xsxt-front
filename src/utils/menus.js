@@ -1,20 +1,18 @@
 import {getRequest} from "./api";
-import router from "@/router";
-import store from "@/store";
 
-export const initMenu=(router,store)=>{
-    if(store.state.routes.length>0){
+export const initMenu = (router, store) => {
+    if (store.state.routes.length > 0) {
         return;
     }
 
-    getRequest('/menu/menu').then(data=>{
-        if (data){
+    getRequest('/menu/menu').then(data => {
+        if (data) {
             //格式化Router
-            let fmtRoutes=formatRoutes(data);
+            let fmtRoutes = formatRoutes(data);
             //添加到router
             router.addRoutes(fmtRoutes);
             //将数据存入vuex
-            store.commit('initRoutes',fmtRoutes);
+            store.commit('initRoutes', fmtRoutes);
         }
     })
 
@@ -50,9 +48,7 @@ export const formatRoutes = (routes) => {
                 } else if (component.startsWith('Sub')) {
                     require(['../views/sub/' + component + '.vue'], resolve);
                 }
-
             }
-
         }
         fmtRoutes.push(fmRouter);
     })

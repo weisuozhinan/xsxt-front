@@ -27,7 +27,6 @@ router.beforeEach((to, from, next) => {
   //判断用户是否登录
   if (window.sessionStorage.getItem('tokenStr')) {
     initMenu(router, store);
-
     if(window.sessionStorage.getItem('permission')==0){
       url='/admin/info';
     }else if(window.sessionStorage.getItem('permission')==1){
