@@ -44,8 +44,8 @@ export default {
     return {
       captchaUrl: '/captcha?time' + new Date(),
       loginForm: {
-        username: 'admin',
-        password: '123456',
+        username: '',
+        password: '',
         code: '',
         permission: 0,
 

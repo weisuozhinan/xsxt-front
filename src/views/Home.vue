@@ -2,7 +2,7 @@
   <div>
     <el-container>
       <el-header class="homeHeader">
-        <div class="title">课设选题系统</div>
+        <div class="title">学生选题管理系统</div>
         <el-dropdown class="userInfo" @command="commandHandler" >
             <span class="el-dropdown-link">
               <div id="title-permission">
