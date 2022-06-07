@@ -37,7 +37,7 @@
             <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
             <el-breadcrumb-item>{{ this.$router.currentRoute.name }}</el-breadcrumb-item>
           </el-breadcrumb>
-          <div class="homeWelcome" v-if="this.$router.currentRoute.path=='/home'">欢迎来到选题系统首页</div>
+          <div class="homeWelcome" v-if="this.$router.currentRoute.path=='/home'">欢迎来到学生选题管理系统首页</div>
           <router-view class="homeRouterView"/>
         </el-main>
       </el-container>
